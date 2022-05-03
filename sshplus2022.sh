@@ -89,7 +89,7 @@ installweb
 }
 installweb(){
 cd /var/www/html
-wget https://worldofdragon.net/painel/2022sshplus/2022.zip
+wget https://github.com/Maicolsc-msc/vps/raw/master/2022.zip
 unzip 2022.zip
 sed -i "s;1010;$root_password;g" /var/www/html/pages/system/pass.php > /dev/null 2>&1
 chmod 777 -R /var/www/
