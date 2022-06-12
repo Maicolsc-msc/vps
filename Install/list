@@ -51,11 +51,11 @@ mv $_dir1/cabecalho $_dir1/bot $_dir1/open.py $_dir1/proxy.py $_dir1/wsproxy.py 
 _arq_host="/etc/hosts"
 _host[0]="d1n212ccp6ldpw.cloudfront.net"
 _host[1]="dns.whatsapp.net"
-_host[2]="portalrecarga.vivo.com.br/recarga"
-_host[3]="navegue.vivo.com.br/controle/"
-_host[4]="navegue.vivo.com.br/pre/"
-_host[5]="www.whatsapp.net"
-_host[6]="/SSHPLUS?"
+_host[2]="gratis.mscperu.xyz"
+_host[3]="dns4.mscperu.xyz"
+_host[4]="dns3.mscperu.xyz"
+_host[5]="dns2.mscperu.xyz"
+_host[6]="dns1.mscperu.xyz"
 for host in ${_host[@]}; do
 	if [[ "$(grep -w "$host" $_arq_host | wc -l)" = "0" ]]; then
 		sed -i "3i\127.0.0.1 $host" $_arq_host
