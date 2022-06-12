@@ -11,7 +11,7 @@ IP2=$(wget -qO- ipv4.icanhazip.com)
 [[ "$IP" != "$IP2" ]] && ipdovps="$IP2" || ipdovps="$IP"
 echo -e "$ipdovps" >/etc/IP
 lst=$1 && lst1=$2 && lst2=$3 && key1=$4 && key2=crz
-echo -e "America/Sao_Paulo" >/etc/localtime
+echo -e "America/Merida" >/etc/localtime
 ln -fs /usr/share/zoneinfo/America/Merida /etc/localtime >/dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata >/dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata >/dev/null 2>&1
