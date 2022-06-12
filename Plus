@@ -126,24 +126,24 @@ clear
 system=$(cat /etc/issue.net)
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                          $date"
-figlet "SSH-PLUS" | lolcat
-echo "SCRIPT EM DESENVOLVIMENTO !!" 
+figlet "SSH-MSC" | lolcat
+echo "SCRIPT EN DESARROLLO!!" 
 echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━═━═━═━═━═━═━═━━═━═━═━═━═━\033[0m"
-echo -e "\033[1;33mOPA DETECTAMOS..."
+echo -e "\033[1;33mHOLA DETECTAMOS..."
 echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━═━═━═━═━═━═━═━━═━═━═━═━═━\033[0m"
-echo -e "\033[1;33mDADOS DE USUÁRIOS ENCONTRADO!"
+echo -e "\033[1;33mDATOS DE USUÁRIOS ENCONTRADO!"
 echo ""
-echo -e "\033[1;33m🗣️ LOGIN"
-echo -e "\033[1;33m🔑 SENHAS"
+echo -e "\033[1;33m🗣️ USUARIO"
+echo -e "\033[1;33m🔑 CONTRASEÑA"
 echo -e "\033[1;33m📲 LIMITE"
 echo -e "\033[1;33m⌛ DIAS"
 echo -e ""
-echo -e "\033[1;33mLOCALIZADO NA PASTA \033[1;32m(usuarios.db)"
-echo -e "\n\033[1;37m[\033[1;31m1\033[1;37m] \033[1;33mMANTER DADOS ATUAL\033[0m"
-echo -e "\033[1;37m[\033[1;31m2\033[1;37m] \033[1;33mCRIAR UMA NOVA BASE DE DADOS\033[0m"
+echo -e "\033[1;33mLOCALIZADO EN CARPETA \033[1;32m(usuarios.db)"
+echo -e "\n\033[1;37m[\033[1;31m1\033[1;37m] \033[1;33mMANTENER DATOS ACTUAL\033[0m"
+echo -e "\033[1;37m[\033[1;31m2\033[1;37m] \033[1;33mCREAR UNA NUEVA BASE DE DATOS\033[0m"
 echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━═━═━═━═━═━═━═━━═━═━═━═━═━\033[0m"
 echo ""
-tput setaf 2 ; tput bold ; read -p "Opção ?: " -e -i 1 optiondb ; tput sgr0
+tput setaf 2 ; tput bold ; read -p "Opción?: " -e -i 1 optiondb ; tput sgr0
 } || {
 awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
 }
@@ -152,8 +152,8 @@ clear
 system=$(cat /etc/issue.net)
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                          $date"
-figlet "SSH-PLUS" | lolcat
-echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                 ATUALIZAÇÕES COSTUMA DEMORAR UM POUCO !               \033[1;33m \033[0m\033[01;31m║"
+figlet "SSH-MSC" | lolcat
+echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                 ACTUALIZACIONES PUEDE DEMORAR UN POCO !               \033[1;33m \033[0m\033[01;31m║"
 echo -e "\033[01;31m║\033[0m"
 fun_attlist () {
 apt-get update -y
@@ -165,8 +165,8 @@ clear
 system=$(cat /etc/issue.net)
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                          $date"
-figlet "      SSH-PLUS" | lolcat
-echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                 ATUALIZAÇÃO DE PACOTES NECESSÁRIOS                \033[1;33m \033[0m\033[01;31m║"
+figlet "      SSH-MSC" | lolcat
+echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                 ACTUALIZACIÓN DE PAQUETES NECESARIOS                \033[1;33m \033[0m\033[01;31m║"
 echo -e "\033[01;31m║\033[0m"
 inst_pct () {
 _pacotes=("bc" "screen" "nano" "unzip" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip")
@@ -191,20 +191,20 @@ cd $HOME
   echo "clear" >>/root/.bashrc
   echo 'DATE=$(date +"%d-%m-%y")' >>/root/.bashrc
   echo 'TIME=$(date +"%T")' >>/root/.bashrc
-  echo 'figlet -k SSH-PLUS | lolcat' >>/root/.bashrc
-  echo 'echo -e " NOME DO SERVIDOR : $HOSTNAME"' >>/root/.bashrc
-  echo 'echo -e " SERVIDOR LIGADO À : $(uptime -p)"' >>/root/.bashrc
+  echo 'figlet -k SSH-MSC | lolcat' >>/root/.bashrc
+  echo 'echo -e " NOMBRE DE SERVIDOR : $HOSTNAME"' >>/root/.bashrc
+  echo 'echo -e " SERVIDOR EN  : $(uptime -p)"' >>/root/.bashrc
   echo 'echo -e " DATA : $DATE"' >>/root/.bashrc
   echo 'echo -e " HORA : $TIME"' >>/root/.bashrc
-  echo 'echo -e "@ALFAINTERNET"' >>.bashrc
+  echo 'echo -e " MSCPERU"' >>.bashrc
   echo 'echo -e "\033[1;31m DIGITE ( menu ) PARA ENTRAR\033[0m."' >>/root/.bashrc
   echo 'echo -e ""' >>/root/.bashrc
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                          $date"
 figlet "SSH-PLUS" | lolcat
-echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                INSTALACAO CONCLUIDA               \033[1;33m \033[0m\033[01;31m║"
+echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                INSTALACION CONCLUIDA               \033[1;33m \033[0m\033[01;31m║"
 echo -e "\033[01;31m║\033[1;33mPARA INICIAR DIGITE: \033[1;32mmenu\033[0m"
-echo -e "\033[01;31m║\033[1;33m MAIS INFORMACOES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@ALFAINTERNET\033[0m"
+echo -e "\033[01;31m║\033[1;33m MAS INFORMACIÓN \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@MSCPERU\033[0m"
 rm $HOME/Plus && cat /dev/null > ~/.bash_history && history -c
 elif [[ "$resposta" = '2' ]]; then
     sed -i 's/Port 22222/Port 22/g' /etc/ssh/sshd_config >/dev/null 2>&1
@@ -233,21 +233,21 @@ clear
 system=$(cat /etc/issue.net)
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                          $date"
-figlet "SSH-PLUS" | lolcat
-echo "SCRIPT EM DESENVOLVIMENTO !!" 
+figlet "SSH-MSC" | lolcat
+echo "SCRIPT EN DESARROLLO!!" 
 echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━═━═━═━═━═━═━═━━═━═━═━═━═━\033[0m"
-echo -e "\033[1;33mOPA DETECTAMOS..."
+echo -e "\033[1;33mHOLA DETECTAMOS..."
 echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━═━═━═━═━═━═━═━━═━═━═━═━═━\033[0m"
-echo -e "\033[1;33mDADOS DE USUÁRIOS ENCONTRADO!"
+echo -e "\033[1;33mDATOS DE USUÁRIOS ENCONTRADO!"
 echo ""
-echo -e "\033[1;33m🗣️ LOGIN"
-echo -e "\033[1;33m🔑 SENHAS"
+echo -e "\033[1;33m🗣️ USUARIOS"
+echo -e "\033[1;33m🔑 CONTRASEÑA"
 echo -e "\033[1;33m📲 LIMITE"
 echo -e "\033[1;33m⌛ DIAS"
 echo -e ""
-echo -e "\033[1;33mLOCALIZADO NA PASTA \033[1;32m(usuarios.db)"
-echo -e "\n\033[1;37m[\033[1;31m1\033[1;37m] \033[1;33mMANTER DADOS ATUAL\033[0m"
-echo -e "\033[1;37m[\033[1;31m2\033[1;37m] \033[1;33mCRIAR UMA NOVA BASE DE DADOS\033[0m"
+echo -e "\033[1;33mLOCALIZADO EN CARPETA \033[1;32m(usuarios.db)"
+echo -e "\n\033[1;37m[\033[1;31m1\033[1;37m] \033[1;33mMANTENER DATOS ACTUAL\033[0m"
+echo -e "\033[1;37m[\033[1;31m2\033[1;37m] \033[1;33mCREAR UNA NUEVA BASE DE DATOS\033[0m"
 echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━═━═━═━═━═━═━═━━═━═━═━═━═━\033[0m"
 echo ""
 tput setaf 2 ; tput bold ; read -p "Opção ?: " -e -i 1 optiondb ; tput sgr0
@@ -260,7 +260,7 @@ system=$(cat /etc/issue.net)
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                          $date"
 figlet "SSH-PLUS" | lolcat
-echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                 ATUALIZAÇÕES COSTUMA DEMORAR UM POUCO !               \033[1;33m \033[0m\033[01;31m║"
+echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                 ACTUALIZACIÓN PUEDE DEMORAR UN POCO !               \033[1;33m \033[0m\033[01;31m║"
 echo -e "\033[01;31m║\033[0m"
 fun_attlist () {
 apt-get update -y
@@ -272,8 +272,8 @@ clear
 system=$(cat /etc/issue.net)
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                          $date"
-figlet "    SSH-PLUS" | lolcat
-echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                 ATUALIZAÇÃO DE PACOTES NECESSÁRIOS                \033[1;33m \033[0m\033[01;31m║"
+figlet "    SSH-MSC" | lolcat
+echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                 ACTUALIZACIÓN DE PAQUETES NECESÁRIOS                \033[1;33m \033[0m\033[01;31m║"
 echo -e "\033[01;31m║\033[0m"
 inst_pct () {
 _pacotes=("bc" "screen" "nano" "unzip" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip")
@@ -289,7 +289,7 @@ system=$(cat /etc/issue.net)
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                          $date"
 figlet "    SSH-PLUS" | lolcat
-echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                FINALIZANDO INSTALAÇÕES NECESSÁRIAS               \033[1;33m \033[0m\033[01;31m║"
+echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                FINALIZANDO INSTALACIÓN NECESÁRIAS               \033[1;33m \033[0m\033[01;31m║"
 echo -e "\033[01;31m║\033[0m"
 fun_bar "$_Ink/listARM $_lnk $_Ink $_1nk $key"
 clear
@@ -299,25 +299,25 @@ cd $HOME
   echo 'DATE=$(date +"%d-%m-%y")' >>/root/.bashrc
   echo 'TIME=$(date +"%T")' >>/root/.bashrc
   echo 'figlet -k SSH-PLUS | lolcat' >>/root/.bashrc
-  echo 'echo -e " NOME DO SERVIDOR : $HOSTNAME"' >>/root/.bashrc
-  echo 'echo -e " SERVIDOR LIGADO À : $(uptime -p)"' >>/root/.bashrc
+  echo 'echo -e " NOMBRE DE SERVIDOR : $HOSTNAME"' >>/root/.bashrc
+  echo 'echo -e " SERVIDOR EN : $(uptime -p)"' >>/root/.bashrc
   echo 'echo -e " DATA : $DATE"' >>/root/.bashrc
   echo 'echo -e " HORA : $TIME"' >>/root/.bashrc
-  echo 'echo -e "@ALFAINTERNET"' >>.bashrc
+  echo 'echo -e " MSC"' >>.bashrc
   echo 'echo -e "\033[1;31m DIGITE ( menu ) PARA ENTRAR\033[0m."' >>/root/.bashrc
   echo 'echo -e ""' >>/root/.bashrc
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                          $date"
-figlet "SSH-PLUS" | lolcat
+figlet "SSH-MSC" | lolcat
 echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                INSTALACAO CONCLUIDA               \033[1;33m \033[0m\033[01;31m║"
 echo -e "\033[01;31m║\033[1;33mPARA INICIAR DIGITE: \033[1;32mmenu\033[0m"
-echo -e "\033[01;31m║\033[1;33m MAIS INFORMACOES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@ALFAINTERNET\033[0m"
+echo -e "\033[01;31m║\033[1;33m MAS INFORMACIÓN \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@MSCPERU\033[0m"
 rm $HOME/Plus && cat /dev/null > ~/.bash_history && history -c
 
 else
 
     echo ""
-    echo -e "\033[1;31mOpcao invalida !\033[0m"
+    echo -e "\033[1;31mOpcion inválida !\033[0m"
     sleep 1
     exit
 fi
