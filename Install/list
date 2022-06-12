@@ -1,8 +1,8 @@
 #!/bin/bash
 #====================================================
-#	SCRIPT: ALFAINTERNET
+#	SCRIPT: MSC
 #       DATA ATT:   10 de julho 2022
-#	DESENVOLVIDO POR:	ALFAINTERNET
+#	DESENVOLVIDO POR: MSC
 #	CANAL TELEGRAM:	http://t.me/mscperu
 #====================================================
 _lvk=$(wget -qO- https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Install/versao)
