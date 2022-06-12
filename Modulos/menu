@@ -565,6 +565,12 @@ case "$x" in
    otimizar
    echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
    ;;
+   0 | 00)
+   echo -e "\033[1;31mSaliendo...\033[0m"
+   sleep 2
+   clear
+   exit;
+   ;;
    *)
    echo -e "\n\033[1;31mOpcion inválida !\033[0m"
    sleep 2
