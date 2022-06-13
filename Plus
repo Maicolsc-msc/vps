@@ -110,6 +110,7 @@ rm versao* > /dev/null 2>&1
 wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Install/versao > /dev/null 2>&1
 wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Modulos/v2raymanager > /dev/null 2>&1
 wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Sistema/botteste.sh >/dev/null 2>&1
+wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Modulos/name > /dev/null 2>&1
 chmod 777 v2raymanager > /dev/null 2>&1
 chmod 777 botteste.sh > /dev/null 2>&1
 mkdir $HOME/BOT >/dev/null 2>&1
