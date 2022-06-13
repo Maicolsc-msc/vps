@@ -250,7 +250,7 @@ echo -e "\n\033[1;37m[\033[1;31m1\033[1;37m] \033[1;33mMANTENER DATOS ACTUAL\033
 echo -e "\033[1;37m[\033[1;31m2\033[1;37m] \033[1;33mCREAR UNA NUEVA BASE DE DATOS\033[0m"
 echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━═━═━═━═━═━═━═━━═━═━═━═━═━\033[0m"
 echo ""
-tput setaf 2 ; tput bold ; read -p "Opção ?: " -e -i 1 optiondb ; tput sgr0
+tput setaf 2 ; tput bold ; read -p "Opción?: " -e -i 1 optiondb ; tput sgr0
 } || {
 awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
 }
