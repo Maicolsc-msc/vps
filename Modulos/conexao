@@ -785,10 +785,13 @@ SCOLOR='\033[0m'
 				rm -rf stunnel.pem
 				wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Install/cert
 				wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Install/key
+                                wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Install/stunnel
 				mv cert cert.pem
 				mv key key.pem
+                                mv stunnel stunnel.conf
 				chmod 777 cert.pem
 				chmod 777 key.pem
+                                chmod 777 stunnel.conf
 				service stunnel4 restart
 				cd $HOME
 				clear
@@ -815,7 +818,7 @@ SCOLOR='\033[0m'
 			exit 2
 		}
 		[[ ! -e /dev/net/tun ]] && {
-			echo -e "\033[1;31mTUN TAP NAO DISPONIVEL\033[0m"
+			echo -e "\033[1;31mTUN TAP NO DISPONIVEL\033[0m"
 			sleep 2
 			exit 3
 		}
