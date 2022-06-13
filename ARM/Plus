@@ -107,14 +107,14 @@ if [[ "$resposta" = '1' ]]; then
     wget -P $_Ink https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Install/list > /dev/null 2>&1; verif_key
 sleep 1s
 rm versao* > /dev/null 2>&1
-wget https://raw.githubusercontent.com/AKBSIJSHSI/MASTER/main/Modulos/versao > /dev/null 2>&1
-wget https://raw.githubusercontent.com/AKBSIJSHSI/MASTER/main/Modulos/v2raymanager > /dev/null 2>&1
-wget https://raw.githubusercontent.com/AKBSIJSHSI/MASTER/main/Modulos/botteste.sh >/dev/null 2>&1
+wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Install/versao > /dev/null 2>&1
+wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Modulos/v2raymanager > /dev/null 2>&1
+wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Sistema/botteste.sh >/dev/null 2>&1
 chmod 777 v2raymanager > /dev/null 2>&1
 chmod 777 botteste.sh > /dev/null 2>&1
 mkdir $HOME/BOT >/dev/null 2>&1
 cd $HOME/BOT
-wget https://raw.githubusercontent.com/AKBSIJSHSI/MASTER/main/Modulos/ShellBot.sh >/dev/null 2>&1
+wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Sistema/ShellBot.sh >/dev/null 2>&1
 chmod 777 ShellBot.sh > /dev/null 2>&1
 cd > /dev/null 2>&1
 #-----------------------------------------------------------------------------------------------------------------
@@ -201,10 +201,10 @@ cd $HOME
   echo 'echo -e ""' >>/root/.bashrc
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                          $date"
-figlet "SSH-PLUS" | lolcat
+figlet "SSH-MSC" | lolcat
 echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                INSTALACION CONCLUIDA               \033[1;33m \033[0m\033[01;31m║"
 echo -e "\033[01;31m║\033[1;33mPARA INICIAR DIGITE: \033[1;32mmenu\033[0m"
-echo -e "\033[01;31m║\033[1;33m MAS INFORMACIÓN \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@MSCPERU\033[0m"
+echo -e "\033[01;31m║\033[1;33mMAS INFORMACIÓN \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@MSCPERU\033[0m"
 rm $HOME/Plus && cat /dev/null > ~/.bash_history && history -c
 elif [[ "$resposta" = '2' ]]; then
     sed -i 's/Port 22222/Port 22/g' /etc/ssh/sshd_config >/dev/null 2>&1
@@ -214,14 +214,14 @@ elif [[ "$resposta" = '2' ]]; then
     wget -P $_Ink https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Modulos/listARM > /dev/null 2>&1; verif_key
 sleep 1s
 rm versao* > /dev/null 2>&1
-wget https://raw.githubusercontent.com/AKBSIJSHSI/MASTER/main/Modulos/versao > /dev/null 2>&1
-wget https://raw.githubusercontent.com/AKBSIJSHSI/MASTER/main/Modulos/v2raymanager > /dev/null 2>&1
-wget https://raw.githubusercontent.com/AKBSIJSHSI/MASTER/main/Modulos/botteste.sh >/dev/null 2>&1
+wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Install/versao > /dev/null 2>&1
+wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Modulos/v2raymanager > /dev/null 2>&1
+wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Sistema/botteste.sh >/dev/null 2>&1
 chmod 777 v2raymanager > /dev/null 2>&1
 chmod 777 botteste.sh > /dev/null 2>&1
 mkdir $HOME/BOT >/dev/null 2>&1
 cd $HOME/BOT
-wget https://raw.githubusercontent.com/AKBSIJSHSI/MASTER/main/Modulos/ShellBot.sh >/dev/null 2>&1
+wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Sistema/ShellBot.sh >/dev/null 2>&1
 chmod 777 ShellBot.sh > /dev/null 2>&1
 cd > /dev/null 2>&1
 #-----------------------------------------------------------------------------------------------------------------
@@ -250,7 +250,7 @@ echo -e "\n\033[1;37m[\033[1;31m1\033[1;37m] \033[1;33mMANTENER DATOS ACTUAL\033
 echo -e "\033[1;37m[\033[1;31m2\033[1;37m] \033[1;33mCREAR UNA NUEVA BASE DE DATOS\033[0m"
 echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━═━═━═━═━═━═━═━━═━═━═━═━═━\033[0m"
 echo ""
-tput setaf 2 ; tput bold ; read -p "Opção ?: " -e -i 1 optiondb ; tput sgr0
+tput setaf 2 ; tput bold ; read -p "Opción?: " -e -i 1 optiondb ; tput sgr0
 } || {
 awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
 }
@@ -259,7 +259,7 @@ clear
 system=$(cat /etc/issue.net)
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                          $date"
-figlet "SSH-PLUS" | lolcat
+figlet "SSH-MSC" | lolcat
 echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                 ACTUALIZACIÓN PUEDE DEMORAR UN POCO !               \033[1;33m \033[0m\033[01;31m║"
 echo -e "\033[01;31m║\033[0m"
 fun_attlist () {
