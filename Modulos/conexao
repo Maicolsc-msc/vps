@@ -1,6 +1,6 @@
 #!/bin/bash
 #====================================================
-#	@ALFAINTERNET 
+#	@mscperu 
 #====================================================
 cor1='\033[41;1;37m'
 cor2='\033[44;1;37m'
@@ -2041,7 +2041,7 @@ exit 0' >$RCLOCAL
 system=$(cat /etc/issue.net)
 date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                $date"
-echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                      CONEXAO                      \033[1;33m \033[0m\033[01;31m║"
+echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                      CONEXIÓN                      \033[1;33m \033[0m\033[01;31m║"
 echo -e "\033[0;31m║\033[0m"
 			echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mOPENSSH \033[1;32mPORTA: \033[1;37m$(grep 'Port' /etc/ssh/sshd_config | cut -d' ' -f2 | grep -v 'no' | xargs)" && sts6="\033[1;32m◉ "
 			[[ "$(netstat -tlpn | grep 'docker' | wc -l)" != '0' ]] && {
@@ -2124,7 +2124,7 @@ echo -e "\033[01;31m║\033[1;31m\033[1;34m[\033[1;37m 00 •\033[1;34m]\033[1;3
 echo -e "\033[01;31m║\033[0m"
 			echo -e "\033[0;31m╠━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━═━\033[0m"
 			tput civis
-			echo -ne "\033[1;31m╰━━━━━━━━❪\033[1;32mESCOLHA OPÇÃO DESEJADA\033[1;33m\033[1;31m\033[1;37m : "; read x
+			echo -ne "\033[1;31m╰━━━━━━━━❪\033[1;32mESCOJA LA OPCIÓN QUE DESEA\033[1;33m\033[1;31m\033[1;37m : "; read x
 case "$x" in
 			1 | 01)
 				fun_openssh
@@ -2169,7 +2169,7 @@ case "$x" in
 echo -e "\033[1;31mTenha em mente que ao executá-lo, se você tivesse estatísticas de consumo, \033[1;33m \033[1;32\033[0m"
 echo -e "\033[1;31meles serão zerados, não há perda de configurações ou do usuário \033[1;33m \033[1;32\033[0m"
 				v2ray clean
-                                echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
+                                echo -ne "\n\033[1;31mENTER \033[1;33mpara volver al \033[1;32mMENU!\033[0m"; read
 				;;
                 14 | 14)
                 clear
