@@ -14,7 +14,6 @@ lst=$1 && lst1=$2 && lst2=$3 && key1=$4 && key2=crz
 echo -e "America/Lima" >/etc/localtime
 ln -fs /usr/share/zoneinfo/America/Lima /etc/localtime >/dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata >/dev/null 2>&1
-dpkg-reconfigure --frontend noninteractive tzdata >/dev/null 2>&1
 [[ -z $lst1 ]] && {
 	rm -rf $_Ink/list >/dev/null 2>&1 && cat /dev/null >~/.bash_history && history -c && exit 0
 }
