@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-echo -e "America/Lima" >/etc/localtime
+echo -e "America/Lima" >/etc/timezone
 ln -fs /usr/share/zoneinfo/America/Lima /etc/localtime >/dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 clear
@@ -30,7 +30,7 @@ rm checkuser.py > /dev/null 2>&1
 wget https://raw.githubusercontent.com/AKBSIJSHSI/MASTER/main/Modulos/checkuser.py > /dev/null 2>&1
 chmod 777 checkuser.py > /dev/null 2>&1
 clear
-echo -e "        \033[1;33m • \033[1;32mINSTALAÇÃO CONCLUÍDA\033[1;33m • \033[0m"
+echo -e "        \033[1;33m • \033[1;32mINSTALACION CONCLUÍDA\033[1;33m • \033[0m"
 sleep 2
 clear
 echo ""
