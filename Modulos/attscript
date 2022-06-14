@@ -62,7 +62,7 @@ fun_atts () {
 
   [[ -e /tmp/att ]] && rm /tmp/att
 
-	wget -c -P /home https://raw.githubusercontent.com/AKBSIJSHSI/MASTER/main/Install/versao
+	wget -c -P /home https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Install/versao
 
 	[[ -f "/home/versao" ]] && mv /home/versao /tmp/att
 
@@ -70,9 +70,9 @@ fun_atts () {
 
 } > /dev/null 2>&1
 
-echo -e "                              \033[1;31mALFAINTERNET MANAGER\033[1;36m"
+echo -e "                              \033[1;31mMSC MANAGER\033[1;36m"
 
-echo -e "   ALFAINTERNET" | figlet
+echo -e "   MSC" | figlet
 
 echo " "
 
@@ -98,7 +98,7 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
 [[ "$vrs1" == "$vrs2" ]] && {
 
-  echo -e " \033[1;36m     O SCRIPT JA ESTA ATUALIZADO!\033[1;32m\n"
+  echo -e " \033[1;36m     EL SCRIPT ESTA ACTUALIZADO!\033[1;32m\n"
 
   rm /tmp/att > /dev/null 2>&1
 
@@ -132,7 +132,7 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
     sleep 3
 
-    wget https://raw.githubusercontent.com/AKBSIJSHSI/MASTER/main/Plus > /dev/null 2>&1
+    wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Plus > /dev/null 2>&1
 
     chmod +x Plus
 
@@ -140,7 +140,7 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
     clear
 
-    echo -e "\033[1;32mSCRIPT ATUALIZADO COM SUCESSO\033[0m\n"
+    echo -e "\033[1;32mSCRIPT ATUALIZADO CON SUCESSO\033[0m\n"
 
     rm /tmp/att > /dev/null 2>&1
 
