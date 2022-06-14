@@ -132,7 +132,7 @@ SCOLOR='\033[0m'
 					}
 				}
 				echo -e "\n\033[1;32mINSTALANDO SQUID PROXY\033[0m\n"
-				fun_bar 'apt update -y' "instsqd $opc"
+				fun_bar 'apt update -y' "apt-get install squid3 -y"
 			}
 			if [[ -d "/etc/squid/" ]]; then
 				var_sqd="/etc/squid/squid.conf"
@@ -155,7 +155,7 @@ SCOLOR='\033[0m'
 				acl url1 dstdomain -i 127.0.0.1
 				acl url2 dstdomain -i localhost
 				acl url3 dstdomain -i $ipdovps
-				acl url4 dstdomain -i /SSHPLUS?
+				acl url4 dstdomain -i dns1.mscperu.xyz
 				acl payload url_regex -i "$var_pay"
 				acl all src 0.0.0.0/0
 
@@ -201,14 +201,14 @@ SCOLOR='\033[0m'
 	}
 
 	addpt_sqd() {
-		echo -e "\E[44;1;37m         ADICIONAR PORTA AO SQUID         \E[0m"
+		echo -e "\E[44;1;37m         ADICIONAR PORTA AL SQUID         \E[0m"
 		echo -e "\n\033[1;33mPORTAS EM USO: \033[1;32m$sqdp\n"
 		if [[ -f "/etc/squid/squid.conf" ]]; then
 			var_sqd="/etc/squid/squid.conf"
 		elif [[ -f "/etc/squid3/squid.conf" ]]; then
 			var_sqd="/etc/squid3/squid.conf"
 		else
-			echo -e "\n\033[1;31mSQUID NAO ESTA INSTALADO!\033[0m"
+			echo -e "\n\033[1;31mSQUID NO ESTA INSTALADO!\033[0m"
 			echo -e "\n\033[1;31mRetornando...\033[0m"
 			sleep 2
 			clear
