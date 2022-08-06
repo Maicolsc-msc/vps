@@ -276,7 +276,7 @@ case "$x" in
    ;;
    19)
    clear
-   badvpn
+   menub
    ;;
    23)
    clear
