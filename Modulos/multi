@@ -10,7 +10,7 @@ SINCRONIZARPAINEL () {
       bash <(wget -qO- https://raw.githubusercontent.com/Maicolsc-msc/vps/master/inst)
 }
 SLOWDNS () {
-      wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/main/SlowDNS/install; chmod +x install; ./install
+      wget https://raw.githubusercontent.com/kiritosshxd/SSHPLUS/main/Slowdns/install; chmod +x install; ./install
 }
 PAINELV20 () {
     bash <(wget -qO- https://raw.githubusercontent.com/Maicolsc-msc/vps/master/inst)
