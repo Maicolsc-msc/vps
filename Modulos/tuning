@@ -98,11 +98,11 @@ exit
 	fi
 else
 echo -e "\033[01;34m====================================================================\033[1;37m"
-echo -e "\033[1;33mCONJUNTO DE MELHORIAS, SERA APLICADO NO SISTEMA"
-echo -e "\033[1;33mO RENDIMENTO PODE SER SUPERIOR OU NÃO."
+echo -e "\033[1;33mCONJUNTO DE MEJORAS, SERA APLICADO EN SISTEMA"
+echo -e "\033[1;33mO RENDIMENTO PUEDE SER SUPERIOR."
 echo -e "\033[01;34m====================================================================\033[1;37m"
 echo ""
-	read -p "DESEJAR CONTINUAR ? [sim/nao]: " -e -i sim resposta
+	read -p "DESEAS CONTINUAR ? [sim/nao]: " -e -i sim resposta
 	if [[ "$resposta" = 'sim' ]]; then
 	echo ""
 	echo " " >> /etc/sysctl.conf
@@ -380,13 +380,13 @@ echo -e "\033[1;33mCONFIGURANDO CWND \033[1;32m(INITCWND)"
 /sbin/ip route | while read p; do ip route change $p initcwnd 10 initrwnd 10 cwnd 10 mtu lock 9000 congctl lock illinois quickack 1; done
 sleep 3s
 echo ""
-	echo -e "\033[1;32mTUNING APLICADO COM SUCESSO !\033[1;37m"
+	echo -e "\033[1;32mTUNING APLICADO CON ÉXITO !\033[1;37m"
 echo ""
 echo ""
 sleep 3s
         else
 echo ""
-echo -e "\033[1;31mA INSTALAÇÃO FOI CANCELADA !\033[1;37m"
+echo -e "\033[1;31mA INSTALACION FUE CANCELADA !\033[1;37m"
 sleep 3s
         fi
 fi
