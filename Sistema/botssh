@@ -41,7 +41,7 @@ criarteste() {
     usuario=$(echo GRATIS$(( RANDOM% + 2500 )))
     senha='12345h'
     limite='2'
-    tempo='500'
+    tempo='900'
     tuserdate=$(date '+%C%y/%m/%d' -d " +2 days")
     useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
@@ -58,7 +58,7 @@ rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
     echo ${callback_query_from_id} >> lista
     # - ENVIA O SSH
     ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-    --text "$(echo -e " <b> CREADO CON ÉXITO </b> \n\nUSUARIO: <code>$usuario</code>\nContraseña: <code>$senha</code>\n\n⏳ Expira : EN 2 DÍAS\n\nCOMPRA TU PREMIUM DE 30 DIAS")" \
+    --text "$(echo -e " <b>CREADO CON ÉXITO </b> \n\nUSUARIO: <code>$usuario</code>\nContraseña: <code>$senha</code>\n\n⏳ Expira : EN 1 DÍAS\n\nCOMPRA TU PREMIUM DE 30 DIAS")" \
     --parse_mode html
     return 0
 }
@@ -157,9 +157,9 @@ unset botao1
 botao1=''
 ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text 'GENERAR CUENTA GRATIS' --callback_data 'gerarssh'
 #ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text '🇨🇦 GERAR SSH CA 01 🇨🇦' --callback_data 'gerarssh2'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text 'DESCARGAR MI APP' --callback_data '2' --url 'https://web.mscperu.store'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text 'PAGINA WEB' --callback_data '2' --url 'https://web.mscperu.store'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text 'TELEGRAM' --callback_data '3' --url 'https://t.me/MSCPERU'
-#ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '⬇️ OUTROS APPS ⬇️' --callback_data '5' --url 'https://tnetssh.xyz/downloads'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '⬇️ WEB DE APLICACIÓN ⬇️' --callback_data '5' --url 'https://web.mscperu.store/productos'
 ShellBot.regHandleFunction --function criarteste --callback_data gerarssh
 ShellBot.regHandleFunction --function criarteste2 --callback_data gerarssh2
 ShellBot.regHandleFunction --function criarteste3 --callback_data gerarssh3
