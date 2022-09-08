@@ -60,7 +60,7 @@ SCOLOR='\033[0m'
 			slowdns
 		} || {
 			cd $HOME
-			wget https://raw.githubusercontent.com/kiritosshxd/SSHPLUS/main/Slowdns/install -o /dev/null
+			wget https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Sistema/install -o /dev/null
 			chmod 777 install
 			./install
 		}
