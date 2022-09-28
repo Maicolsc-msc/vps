@@ -1,3 +1,3 @@
 # vps
 
-http://bmaster.net/shad/1rs/mseR/?k=371AF503&c=FC&os=Android&metaRep4=SkyVPN
+https://www.skyhide.net/flexibleh5/invite_page/#/?k=371AF503&c=FC&os=Android&metaRep4=SkyVPN
