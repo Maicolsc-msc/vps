@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-echo -e "\E[44;1;37m               INFORMACOES DA VPS                 \E[0m"
+echo -e "\E[44;1;37m               INFORMACION DE VPS                 \E[0m"
 echo ""
 if [ -f /etc/lsb-release ]
 then
@@ -8,21 +8,21 @@ echo -e "\033[1;31m• \033[1;32mSISTEMA OPERACIONAL\033[1;31m •\033[0m"
 echo ""
 name=$(cat /etc/lsb-release |grep DESCRIPTION |awk -F = {'print $2'})
 codename=$(cat /etc/lsb-release |grep CODENAME |awk -F = {'print $2'})
-echo -e "\033[1;33mNome: \033[1;37m$name"
+echo -e "\033[1;33mNombre: \033[1;37m$name"
 echo -e "\033[1;33mCodeName: \033[1;37m$codename"
 echo -e "\033[1;33mKernel: \033[1;37m$(uname -s)"
 echo -e "\033[1;33mKernel Release: \033[1;37m$(uname -r)"
 if [ -f /etc/os-release ]
 then
 devlike=$(cat /etc/os-release |grep LIKE |awk -F = {'print $2'})
-echo -e "\033[1;33mDerivado do OS: \033[1;37m$devlike"
+echo -e "\033[1;33mDerivado de OS: \033[1;37m$devlike"
 echo ""
 fi
 else
 system=$(cat /etc/issue.net)
 echo -e "\033[1;31m• \033[1;32mSISTEMA OPERACIONAL\033[1;31m •\033[0m"
 echo ""
-echo -e "\033[1;33mNome: \033[1;37m$system"
+echo -e "\033[1;33mNombre: \033[1;37m$system"
 echo ""
 fi
 
@@ -66,7 +66,7 @@ echo ""
 echo "Não foi possivel obter informações"
 fi
 [[ ! -e /bin/versao ]] && rm -rf /etc/SSHPlus
-echo -e "\033[1;31m• \033[1;32mSERVICOS EM EXECUCAO\033[1;31m •\033[0m"
+echo -e "\033[1;31m• \033[1;32mSERVICOS EN EJECUCION\033[1;31m •\033[0m"
 echo ""
 PT=$(lsof -V -i tcp -P -n | grep -v "ESTABLISHED" |grep -v "COMMAND" | grep "LISTEN")
 for porta in `echo -e "$PT" | cut -d: -f2 | cut -d' ' -f1 | uniq`; do
