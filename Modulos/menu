@@ -234,12 +234,12 @@ date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                          $date"
 echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                               MSCPERU                              \033[1;33m \033[0m\033[01;31m║"
 echo -e "\033[1;31m╠━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━━═━═━═━═━═━═━━═━╣\033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;32mSISTEMA              |  MEMÓRIA RAM          |  PROCESSADOR \033[0m         "
-echo -e "\033[01;31m║\033[1;31m\033[1;32mOS: \033[1;37m$_system   | \033[1;31mTOTAL:\033[1;37m$_ram      | \033[1;31mNUCLEO: \033[1;37m$_core            \033[1;31m"
-echo -e "\033[01;31m║\033[1;31m\033[1;32mHORÁRIO: \033[1;37m$_hora    | \033[1;31mEN USO: \033[1;37m$_usor      | \033[1;31mEN USO: \033[1;37m$_usop         \033[1;31m"
-echo -e "\033[01;31m║\033[1;31m\033[1;32mBAD-UDP/VPN  \033[1;37m$stsu \033[1;37m | \033[1;36mBOT TELEGRAM $stsbot  \033[1;37m | \033[1;37m\033[1;36mLIMITADOR SSH \033[1;37m$stsl"
+echo -e "\033[01;31m\033[1;31m\033[1;32mSISTEMA              |  MEMÓRIA RAM          |  PROCESSADOR \033[0m         "
+echo -e "\033[01;31m\033[1;31m\033[1;32mOS: \033[1;37m$_system   | \033[1;31mTOTAL:\033[1;37m$_ram      | \033[1;31mNUCLEO: \033[1;37m$_core            \033[1;31m"
+echo -e "\033[01;31m\033[1;31m\033[1;32mHORÁRIO: \033[1;37m$_hora    | \033[1;31mEN USO: \033[1;37m$_usor      | \033[1;31mEN USO: \033[1;37m$_usop         \033[1;31m"
+echo -e "\033[01;31m\033[1;31m\033[1;32mBAD-UDP/VPN  \033[1;37m$stsu \033[1;37m | \033[1;36mBOT TELEGRAM $stsbot  \033[1;37m | \033[1;37m\033[1;36mLIMITADOR SSH \033[1;37m$stsl"
 [[ ! -e /tmp/att ]]  && {
-    echo -e "\033[01;31m║\033[1;31m\033[1;32mCONECTADOS:\033[1;37m $_onlin    | \033[1;31mVENCIDOS: \033[1;37m$_userexp       | \033[1;33mUSUARIOS: \033[1;37m$_tuser          \033[1;31m"
+    echo -e "\033[01;31m\033[1;31m\033[1;32mCONECTADOS:\033[1;37m $_onlin    | \033[1;31mVENCIDOS: \033[1;37m$_userexp       | \033[1;33mUSUARIOS: \033[1;37m$_tuser          \033[1;31m"
     var01='\033[1;37m•'
 } || {
     echo -e "  \033[1;33m[\033[1;31m!\033[1;33m]  \033[1;32mEXISTE UNA ACTUALIZACIÓN DISPONIBLE  \033[1;33m[\033[1;31m!\033[1;33m]\033[0m"
@@ -285,8 +285,8 @@ case "$x" in
    24)
    clear
    echo -e "\E[44;1;37m             AUTO REBOOT              \E[0m"
-                                echo -e "\033[1;31mESSA FUNÇÃO ATIVA REINICIALIZAÇÃO AUTOMÁTICA DA TUA VPS \033[1;33m \033[1;32\033[0m"
-   echo -e "\033[1;31M ESCOLHA UM HORÁRIO PARA O DESLIGAMENTO EX: \033[1;33m00:00 \033[1;32\033[0m"
+                                echo -e "\033[1;31mESTA FUNCIÓN ACTIVA EL REINICIO AUTOMÁTICO DE SU VPS \033[1;33m \033[1;32\033[0m"
+   echo -e "\033[1;31m ELIJA UNA HORA PARA EL APAGADO DE EX: \033[1;33m00:00 \033[1;32\033[0m"
 echo -ne "\033[1;32mDIGITE A HORA \033[1;33m\033[1;37m: "
             read escolha
                 echo ""
@@ -304,8 +304,8 @@ echo -ne "\033[1;32mDIGITE A HORA \033[1;33m\033[1;37m: "
    1)
    clear
    echo -e "\E[44;1;37m             AUTO REBOOT              \E[0m"
-   echo -e "\033[1;31mESSA FUNÇÃO DESATIVA A REINICIALIZAÇÃO AUTOMÁTICA DA TUA VPS \033[1;33m \033[1;32\033[0m"
-   echo -e "\033[1;31mO HORÁRIO PRÉ DEFINIDO $escolha SERÁ DESATIVADO \033[1;33m \033[1;32\033[0m"
+   echo -e "\033[1;31mESTA FUNCIÓN DESHABILITA EL REINICIO AUTOMÁTICO DE SU VPS \033[1;33m \033[1;32\033[0m"
+   echo -e "\033[1;31mEL HORÁRIO PRÉ DEFINIDO $escolha SERÁ DESATIVADO \033[1;33m \033[1;32\033[0m"
    shutdown -c
 echo -e "\033[1;33mAUTO REBOOT DESATIVADO COM SUCESSO \033[0m"
 echo -e ""
@@ -314,7 +314,7 @@ echo -e ""
    25)
    clear
    multi 
-   echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar ao \033[1;32mMENU!\033[0m"; read
+   echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar AL \033[1;32mMENU!\033[0m"; read
    menu2
    ;;
    28)
@@ -415,12 +415,12 @@ date=$(date '+%Y-%m-%d <> %H:%M:%S')
 echo -e "\033[1;37m $system                          $date"
 echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                             MSCPERU                              \033[1;33m \033[0m\033[01;31m║"
 echo -e "\033[1;31m╠━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━━═━═━═━═━═━═━━║\033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;32mSISTEMA              |  MEMÓRIA RAM          |  PROCESSADOR        \033[0m"
-echo -e "\033[01;31m║\033[1;31m\033[1;32mOS: \033[1;37m$_system   | \033[1;31mTOTAL:\033[1;37m$_ram      | \033[1;31mNUCLEO: \033[1;37m$_core          \033[1;31m"
-echo -e "\033[01;31m║\033[1;31m\033[1;32mHORÁRIO: \033[1;37m$_hora    | \033[1;31mEN USO: \033[1;37m$_usor      | \033[1;31mEN USO: \033[1;37m$_usop       \033[1;31m"
-echo -e "\033[01;31m║\033[1;31m\033[1;32mBAD-UDP/VPN  \033[1;37m$stsu \033[1;37m | \033[1;36mBOT TELEGRAM $stsbot  \033[1;37m | \033[1;37m\033[1;36mLIMITADOR SSH \033[1;37m$stsl"
+echo -e "\033[01;31m\033[1;31m\033[1;32mSISTEMA              |  MEMÓRIA RAM          |  PROCESSADOR        \033[0m"
+echo -e "\033[01;31m\033[1;31m\033[1;32mOS: \033[1;37m$_system   | \033[1;31mTOTAL:\033[1;37m$_ram      | \033[1;31mNUCLEO: \033[1;37m$_core          \033[1;31m"
+echo -e "\033[01;31m\033[1;31m\033[1;32mHORÁRIO: \033[1;37m$_hora    | \033[1;31mEN USO: \033[1;37m$_usor      | \033[1;31mEN USO: \033[1;37m$_usop       \033[1;31m"
+echo -e "\033[01;31m\033[1;31m\033[1;32mBAD-UDP/VPN  \033[1;37m$stsu \033[1;37m | \033[1;36mBOT TELEGRAM $stsbot  \033[1;37m | \033[1;37m\033[1;36mLIMITADOR SSH \033[1;37m$stsl"
 [[ ! -e /tmp/att ]]  && {
-    echo -e "\033[01;31m║\033[1;31m\033[1;32mCONECTADOS:\033[1;37m $_onlin    | \033[1;31mVENCIDOS: \033[1;37m$_userexp       | \033[1;33mUSUARIOS: \033[1;37m$_tuser        \033[1;31m"
+    echo -e "\033[01;31m\033[1;31m\033[1;32mCONECTADOS:\033[1;37m $_onlin    | \033[1;31mVENCIDOS: \033[1;37m$_userexp       | \033[1;33mUSUARIOS: \033[1;37m$_tuser        \033[1;31m"
     var01='\033[1;37m•'
 } || {
     echo -e "  \033[1;33m[\033[1;31m!\033[1;33m]  \033[1;32mEXISTE UNA ACTUALIZACIÓN DISPONIBLE  \033[1;33m[\033[1;31m!\033[1;33m]\033[0m"
