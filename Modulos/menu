@@ -558,7 +558,7 @@ case "$x" in
    v)
    v2raymanager
    ;;
-   i)
+   k)
    mtuning
    ;;
    m)
