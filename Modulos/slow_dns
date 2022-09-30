@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 #——————————————————
-# CRIADOR POR @ALFAINTERNET
+# CRIADOR POR @MSCPERU
 # VERSAO 1.0
 # SLOW DNS TUNNEL
 #——————————————————
@@ -24,7 +24,7 @@ installslowdns() {
 	    conexao
 	}
     mkdir /etc/SSHPlus/dns >/dev/null 2>&1
-    wget -P $DIR https://raw.githubusercontent.com/alfainternet/main/slowdns/dns-server >/dev/null 2>&1  
+    wget -P $DIR https://raw.githubusercontent.com/Maicolsc-msc/vps/modulo/Install/dns-server >/dev/null 2>&1  
     chmod 777 $DIR/dns-server >/dev/null 2>&1
     $DIR/dns-server -gen-key -privkey-file $DIR/server.key -pubkey-file $DIR/server.pub >/dev/null 2>&1
     configdns() {
