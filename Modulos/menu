@@ -133,7 +133,7 @@ function onapp1 () {
 	   echo -e "ps x | grep 'onlineapp' | grep -v 'grep' && echo 'ON' || screen -dmS onlineapp onlineapp" >> /etc/autostart
    }
    IP=$(wget -qO- ipv4.icanhazip.com) >/dev/null 2>&1
-   echo -e "\n\033[1;32m  ONLINE APP ATIVO !\033[0m"
+   echo -e "\n\033[1;32m  ONLINE APP ACTIVO !\033[0m"
    echo -e "\033[1;31m \033[1;33mURL de Usuários Online para usar no App\033[0m"
    echo -e " http://$IP:8888/server/online"
    sleep 10
@@ -165,19 +165,19 @@ function onapp_ssh () {
 function autoexec () {
    if grep "menu;" /etc/profile > /dev/null; then
       clear
-      echo -e "\033[1;32mDESATIVANDO AUTO EXECUÇÃO\033[0m"
+      echo -e "\033[1;32mDESACTIVANDO AUTO EJECUCION\033[0m"
       offautmenu () {
          sed -i '/menu;/d' /etc/profile
       }
       echo ""
       fun_bar 'offautmenu'
       echo ""
-      echo -e "\033[1;31mAUTO EXECUÇÃO DESATIVADO!\033[0m"
+      echo -e "\033[1;31mAUTO EJECUCIÓN DESACTIVADO!\033[0m"
       sleep 1.5s
       menu2
    else
       clear
-      echo -e "\033[1;32mATIVANDO AUTO EXECUÇÃO\033[0m"
+      echo -e "\033[1;32mACTIVANDO AUTO EJECUCIÓN\033[0m"
       autmenu () {
          grep -v "^menu;" /etc/profile > /tmp/tmpass && mv /tmp/tmpass /etc/profile
          echo "menu;" >> /etc/profile
@@ -295,11 +295,11 @@ echo -ne "\033[1;32mDIGITE A HORA \033[1;33m\033[1;37m: "
                 clear
    shutdown -r +$escolha
    echo -e ""
-   echo -e "\033[1;33mAUTO REBOOT AS $escolha ATIVADO COM SUCESSO \033[0m"
+   echo -e "\033[1;33mAUTO REBOOT FUE $escolha ACTIVADO CON ÉXITO \033[0m"
    echo -e ""
-   echo -e "\033[1;34m[\033[1;37m01 •\033[1;34m]\033[1;37m > \033[1;33mDESATIVAR REBOOT \033[1;37m\033[0;32m"
+   echo -e "\033[1;34m[\033[1;37m01 •\033[1;34m]\033[1;37m > \033[1;33mDESACTIVAR REBOOT \033[1;37m\033[0;32m"
    echo -e ""
-   echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLTAR AO \033[1;33mMENU!\033[0m"; read
+   echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLVER AL \033[1;33mMENU!\033[0m"; read
    ;;
    1)
    clear
@@ -307,9 +307,9 @@ echo -ne "\033[1;32mDIGITE A HORA \033[1;33m\033[1;37m: "
    echo -e "\033[1;31mESTA FUNCIÓN DESHABILITA EL REINICIO AUTOMÁTICO DE SU VPS \033[1;33m \033[1;32\033[0m"
    echo -e "\033[1;31mEL HORÁRIO PRÉ DEFINIDO $escolha SERÁ DESATIVADO \033[1;33m \033[1;32\033[0m"
    shutdown -c
-echo -e "\033[1;33mAUTO REBOOT DESATIVADO COM SUCESSO \033[0m"
+echo -e "\033[1;33mAUTO REBOOT DESACTIVADO CON ÉXITO \033[0m"
 echo -e ""
-   echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLTAR AO \033[1;33mMENU!\033[0m"; read
+   echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLVER AL \033[1;33mMENU!\033[0m"; read
    ;;
    25)
    clear
@@ -361,7 +361,7 @@ echo -e ""
    v2raymanager
    ;;
    0 | 00)
-   echo -e "\033[1;31mSaindo...\033[0m"
+   echo -e "\033[1;31mSaliendo...\033[0m"
    sleep 2
    clear
    exit;
