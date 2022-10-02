@@ -176,12 +176,12 @@ verifica_acesso() {
 fun_adduser() {
     [[ "$(grep -wc ${callback_query_from_username} $suspensos)" != '0' ]] && {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-            --text "⚠️ está suspendido! Contacte con administrador"
+            --text "⚠️ Esta suspendido! Contacte con administrador"
         return 0
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "👤 CREAR USUARIO 👤\n\nNombre de usuario:" \
+            --text "👤 CRIAR USUARIO 👤\n\nNome do usuario:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -232,7 +232,7 @@ criar_user() {
         ./easyrsa build-client-full $usuario nopass
         newclient "$usuario"
     }
-    echo "usuario $usuario $validade $senha creado"
+    echo "usuario $usuario $validade $senha criado"
 }
 
 fun_deluser() {
@@ -1261,7 +1261,7 @@ restaure_backup() {
 }
 msg_bem_vindo() {
     local msg
-    msg="✌️😃 Ola <b>${message_from_first_name[$id]}</b>\n\nBEM VINDO(a)\n\n"
+    msg="✌️😃 HOLA <b>${message_from_first_name[$id]}</b>\n\nBIENVENIDO(a)\n\n"
     msg+="Para acessar o menu\nclick ou execute [ /menu ]\n\n"
     msg+="Para obter informacoes\nclick ou execute [ /ajuda ]\n\n"
     ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
@@ -1748,7 +1748,7 @@ menu1=''
 ShellBot.InlineKeyboardButton --button 'menu1' --line 1 --text 'CREAR USUARIO' --callback_data '_criaruser'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 2 --text 'CREAR TESTE' --callback_data '_criarteste'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 3 --text 'REMOVER' --callback_data '_deluser'
-ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'CAMBIAR PASSW' --callback_data '_altsenha'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'CAMBIAR CONTRASEÑA' --callback_data '_altsenha'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 5 --text 'CAMBIAR LIMITE' --callback_data '_altlimite'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 6 --text 'ALTERAR DATA' --callback_data '_altdata'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text 'USUARIOS ONLINE' --callback_data '_monitor'
@@ -1757,7 +1757,7 @@ ShellBot.InlineKeyboardButton --button 'menu1' --line 9 --text 'EXPIRADOS' --cal
 ShellBot.InlineKeyboardButton --button 'menu1' --line 1 --text 'INFO VPS' --callback_data '_infovps'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 2 --text 'OPTIMIZAR' --callback_data '_otimizar'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 3 --text 'ARCHIVOS' --callback_data '_arqdown'
-#ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'REVENDA' --callback_data '_opcoesrev'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'REVENDA' --callback_data '_opcoesrev'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 5 --text 'SPEEDTESTE' --callback_data '_speedteste'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 6 --text 'BACKUP USUARIOS' --callback_data '_backupusers'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text "ALTO BACKUP" --callback_data '_autobkp'
@@ -1780,7 +1780,7 @@ ShellBot.regHandleFunction --function backup_users --callback_data _backupusers
 ShellBot.regHandleFunction --function fun_backauto --callback_data _autobkp
 ShellBot.regHandleFunction --function relatorio_rev --callback_data _relatorio
 ShellBot.regHandleFunction --function fun_ajuda --callback_data _ajuda
-#ShellBot.regHandleFunction --function fun_menurevenda --callback_data _opcoesrev
+ShellBot.regHandleFunction --function fun_menurevenda --callback_data _opcoesrev
 unset keyboard1
 keyboard1="$(ShellBot.InlineKeyboardMarkup -b 'menu1')"
 
