@@ -1263,7 +1263,7 @@ msg_bem_vindo() {
     local msg
     msg="✌️😃 HOLA <b>${message_from_first_name[$id]}</b>\n\nBIENVENIDO AL PANEL SSH\n\n"
     msg+="Para Acceder al menu\nclick aqui ➢ [ /menu ]\n\n"
-    msg+="Para obter informaciones\nclick aqui ➢ [ /ajuda ]\n\n"
+    msg+="Para obtener informaciones\nclick aqui ➢ [ /ajuda ]\n\n"
     ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --parse_mode html
@@ -1760,8 +1760,8 @@ ShellBot.InlineKeyboardButton --button 'menu1' --line 3 --text 'ARCHIVOS' --call
 #ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'REVENDA' --callback_data '_opcoesrev'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 5 --text 'SPEEDTESTE' --callback_data '_speedteste'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 6 --text 'BACKUP USUARIOS' --callback_data '_backupusers'
-ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text "ALTO BACKUP" --callback_data '_autobkp'
-ShellBot.InlineKeyboardButton --button 'menu1' --line 8 --text 'RELATORIO' --callback_data '_relatorio'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text "AUTO BACKUP" --callback_data '_autobkp'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 8 --text 'REVENDEDOR' --callback_data '_relatorio'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 9 --text 'AYUDA' --callback_data '_ajuda'
 ShellBot.regHandleFunction --function fun_adduser --callback_data _criaruser
 ShellBot.regHandleFunction --function fun_add_teste --callback_data _criarteste
