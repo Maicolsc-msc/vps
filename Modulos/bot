@@ -1757,7 +1757,7 @@ ShellBot.InlineKeyboardButton --button 'menu1' --line 9 --text 'EXPIRADOS' --cal
 ShellBot.InlineKeyboardButton --button 'menu1' --line 1 --text 'INFO VPS' --callback_data '_infovps'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 2 --text 'OPTIMIZAR' --callback_data '_otimizar'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 3 --text 'ARCHIVOS' --callback_data '_arqdown'
-ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'REVENDA' --callback_data '_opcoesrev'
+#ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'REVENDA' --callback_data '_opcoesrev'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 5 --text 'SPEEDTESTE' --callback_data '_speedteste'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 6 --text 'BACKUP USUARIOS' --callback_data '_backupusers'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text "ALTO BACKUP" --callback_data '_autobkp'
@@ -1780,7 +1780,7 @@ ShellBot.regHandleFunction --function backup_users --callback_data _backupusers
 ShellBot.regHandleFunction --function fun_backauto --callback_data _autobkp
 ShellBot.regHandleFunction --function relatorio_rev --callback_data _relatorio
 ShellBot.regHandleFunction --function fun_ajuda --callback_data _ajuda
-ShellBot.regHandleFunction --function fun_menurevenda --callback_data _opcoesrev
+#ShellBot.regHandleFunction --function fun_menurevenda --callback_data _opcoesrev
 unset keyboard1
 keyboard1="$(ShellBot.InlineKeyboardMarkup -b 'menu1')"
 
