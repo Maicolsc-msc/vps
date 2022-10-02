@@ -25,7 +25,7 @@ fun_menu() {
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         env_msg+="<b> BIENVENIDO AL PANEL SSH  </b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        env_msg+="⚠️ <i>SELECIONE UNA OPCION ABAJO!</i>\n\n"
+        env_msg+="⚠️ <i>SELECCIONE UNA OPCION ABAJO!</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
             --parse_mode html
@@ -41,7 +41,7 @@ fun_menu() {
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         env_msg+="<b>BIENVENIDO(a)</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        env_msg+="⚠️ <i>SELECIONE UNA OPCION ABAJO!</i>\n\n"
+        env_msg+="⚠️ <i>SELECCIONE UNA OPCION ABAJO!</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard2" \
             --parse_mode html
@@ -51,7 +51,7 @@ fun_menu() {
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         env_msg+="<b>BIENVENIDO(a)</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        env_msg+="⚠️ <i>SELECIONE UNA OPCION ABAJO!</i>\n\n"
+        env_msg+="⚠️ <i>SELECCIONE UNA OPCION ABAJO!</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard3" \
             --parse_mode html
@@ -1262,8 +1262,8 @@ restaure_backup() {
 msg_bem_vindo() {
     local msg
     msg="✌️😃 HOLA <b>${message_from_first_name[$id]}</b>\n\nBIENVENIDO AL PANEL SSH\n\n"
-    msg+="Para acessar o menu\nclick ou execute [ /menu ]\n\n"
-    msg+="Para obter informaciones\nclick aqui [ /ajuda ]\n\n"
+    msg+="Para Acceder al menu\nclick aqui ➢ [ /menu ]\n\n"
+    msg+="Para obter informaciones\nclick aqui ➢ [ /ajuda ]\n\n"
     ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --parse_mode html
