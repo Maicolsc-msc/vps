@@ -236,7 +236,7 @@ fun_edithost() {
         clear
         nano /etc/openvpn/client-common.txt
         echo ""
-        echo -e "\033[1;32mALTERADO COM SUCESSO!\033[0m"
+        echo -e "\033[1;32mALTERADO CON EXITO!\033[0m"
         fun_geraovpn
         sleep 1.5
     elif [[ "$respo" = '0' ]]; then
@@ -245,7 +245,7 @@ fun_edithost() {
         sleep 2
     else
         echo ""
-        echo -e "\033[1;31mOpcao invalida !\033[0m"
+        echo -e "\033[1;31mOpcion invalida !\033[0m"
         sleep 2
         fun_edithost
     fi
@@ -259,7 +259,7 @@ tput setaf 7;tput setab 4;tput bold;printf '%30s%s%-15s\n' "CREAR USUÁRIO SSH";
 #}
 echo -ne "\033[1;32m🗣️ USUÁRIO:\033[1;37m ";read username
 [[ -z $username ]] && {
-	echo -e "\n${cor1}usuário vACIO o invalido!${scor}\n"
+	echo -e "\n${cor1}usuário vacio o invalido!${scor}\n"
 	exit 1
 }
 [[ "$(grep -wc $username /etc/passwd)" != '0' ]] && {
@@ -274,7 +274,7 @@ sizemin=$(echo ${#username})
 }
 sizemax=$(echo ${#username})
 [[ $sizemax -gt 25 ]] && {
-	echo -e "\n${cor1}Você digitou um nome de usuário muito grande"
+	echo -e "\n${cor1}Escribiste un nombre de usuario muy grande"
 	echo -e "${cor1}use no máximo 25 caracteres!${scor}\n"
 	exit 1
 }
@@ -303,20 +303,20 @@ echo -ne "\033[1;32m⌛ DIAS PARA EXPIRAR:\033[1;37m ";read dias
 }
 echo -ne "\033[1;32m📲 LIMITE DE CONEXIONES:\033[1;37m ";read sshlimiter
 [[ -z $sshlimiter ]] && {
-	echo -e "\n${cor1}Você deixou o limite de conexões vazio!${scor}\n"
+	echo -e "\n${cor1}Dejaste el límite de conexión vacío!${scor}\n"
 	exit 1
 }
 [[ ${sshlimiter} != ?(+|-)+([0-9]) ]] && {
-	echo -e "\n${cor1}Você digitou um número de conexões inválido!${scor}\n"
+	echo -e "\n${cor1}Ha introducido una serie de conexiones inválido!${scor}\n"
 	exit 1
 }
 [[ $sshlimiter -lt 1 ]] && {
-	echo -e "\n${cor1}Número de conexões simultâneas deve ser maior que zero!${scor}\n"
+	echo -e "\n${cor1}El número de conexiones simultáneas debe ser mayor que cero!${scor}\n"
 	exit 1
 }
 echo -ne "\033[1;32m💲 VALOR:\033[1;37m ";read vl
 [[ -z $vl ]] && {
-	echo -e "\n${cor1}Valor vazio ou invalido!${scor}\n"
+	echo -e "\n${cor1}Valor vacío o no válido!${scor}\n"
 	exit 1
 }
 final=$(date "+%Y-%m-%d" -d "+$dias days")
