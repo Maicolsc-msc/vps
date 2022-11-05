@@ -4,4 +4,4 @@ I'm using SkyVPN & It's fantastic!Super-fast VPN connection! You gonna love it t
 
 
 
-https://www.skyturbovpn.com/flexibleh5/datastatistic?id=AT07PK1&channel=FC
+https://www.skyhide.net/flexibleh5/datastatistic?id=AT07PK1&channel=FC
